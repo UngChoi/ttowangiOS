@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30446B8C1D3F3FA90067A8FB /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B8B1D3F3FA90067A8FB /* JoinViewController.swift */; };
+		30446B8E1D3F4FA30067A8FB /* StoreEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B8D1D3F4FA30067A8FB /* StoreEntity.swift */; };
+		30446B901D3F4FB90067A8FB /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B8F1D3F4FB90067A8FB /* UserEntity.swift */; };
+		30446B921D3F4FF50067A8FB /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B911D3F4FF50067A8FB /* UserDAO.swift */; };
+		30446B941D3F665A0067A8FB /* StampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B931D3F665A0067A8FB /* StampViewController.swift */; };
+		30446B981D3F75990067A8FB /* StampEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B971D3F75990067A8FB /* StampEntity.swift */; };
+		30446B9A1D3F77390067A8FB /* StampList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B991D3F77390067A8FB /* StampList.swift */; };
+		30AAB51E1D408757005B178B /* StampUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB51D1D408757005B178B /* StampUseViewController.swift */; };
+		30AAB5221D40973A005B178B /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB5211D40973A005B178B /* PresentViewController.swift */; };
+		30AAB5251D41EB46005B178B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AAB5231D41EB46005B178B /* Main.storyboard */; };
+		30D84B571D426194003F27C0 /* ModifyUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D84B561D426194003F27C0 /* ModifyUserViewController.swift */; };
+		30D84B591D434196003F27C0 /* CouponEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D84B581D434196003F27C0 /* CouponEntity.swift */; };
+		30D84B5D1D434D9C003F27C0 /* CouponList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D84B5C1D434D9C003F27C0 /* CouponList.swift */; };
+		30D84B631D436466003F27C0 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D84B621D436466003F27C0 /* CouponCell.swift */; };
+		30D84B671D43669D003F27C0 /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D84B661D43669D003F27C0 /* CouponTableViewController.swift */; };
+		5B7553A71D3E510700CECDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7553A61D3E510700CECDAB /* AppDelegate.swift */; };
+		5B7553A91D3E510700CECDAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7553A81D3E510700CECDAB /* ViewController.swift */; };
+		5B7553AE1D3E510700CECDAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7553AD1D3E510700CECDAB /* Assets.xcassets */; };
+		5B896F9E1D43995600AD4296 /* JoinStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896F9D1D43995600AD4296 /* JoinStoreViewController.swift */; };
+		5B896FA01D4399C900AD4296 /* StoreDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896F9F1D4399C900AD4296 /* StoreDAO.swift */; };
+		5B896FA21D439D6400AD4296 /* StoreInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896FA11D439D6400AD4296 /* StoreInformationViewController.swift */; };
+		5B896FA41D43A1CA00AD4296 /* StoreManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896FA31D43A1CA00AD4296 /* StoreManagementViewController.swift */; };
+		5B896FA61D43AC2D00AD4296 /* FullStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896FA51D43AC2D00AD4296 /* FullStoreTableViewController.swift */; };
+		5B896FA81D43AE8A00AD4296 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896FA71D43AE8A00AD4296 /* StoreCell.swift */; };
+		5B896FAA1D43B0FC00AD4296 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896FA91D43B0FC00AD4296 /* DetailViewController.swift */; };
+		5B896FAC1D448F8200AD4296 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896FAB1D448F8200AD4296 /* SettingViewController.swift */; };
+		5B896FAE1D44AB6000AD4296 /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896FAD1D44AB6000AD4296 /* CertificationViewController.swift */; };
+		5B896FB01D44FC2800AD4296 /* FullStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B896FAF1D44FC2800AD4296 /* FullStoreViewController.swift */; };
+		5BCEBFBD1D5F0BA4003D9D3D /* EmployManageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEBFBC1D5F0BA4003D9D3D /* EmployManageTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		30446B8B1D3F3FA90067A8FB /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		30446B8D1D3F4FA30067A8FB /* StoreEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreEntity.swift; sourceTree = "<group>"; };
+		30446B8F1D3F4FB90067A8FB /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		30446B911D3F4FF50067A8FB /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		30446B931D3F665A0067A8FB /* StampViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampViewController.swift; sourceTree = "<group>"; };
+		30446B971D3F75990067A8FB /* StampEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampEntity.swift; sourceTree = "<group>"; };
+		30446B991D3F77390067A8FB /* StampList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampList.swift; sourceTree = "<group>"; };
+		30AAB51D1D408757005B178B /* StampUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampUseViewController.swift; sourceTree = "<group>"; };
+		30AAB5211D40973A005B178B /* PresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
+		30AAB5241D41EB46005B178B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30D84B561D426194003F27C0 /* ModifyUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyUserViewController.swift; sourceTree = "<group>"; };
+		30D84B581D434196003F27C0 /* CouponEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponEntity.swift; sourceTree = "<group>"; };
+		30D84B5C1D434D9C003F27C0 /* CouponList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CouponList.swift; path = ../CouponList.swift; sourceTree = "<group>"; };
+		30D84B621D436466003F27C0 /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
+		30D84B661D43669D003F27C0 /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
+		5B7553A31D3E510700CECDAB /* HanIum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanIum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B7553A61D3E510700CECDAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B7553A81D3E510700CECDAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B7553AD1D3E510700CECDAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B7553B21D3E510700CECDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B896F9D1D43995600AD4296 /* JoinStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinStoreViewController.swift; sourceTree = "<group>"; };
+		5B896F9F1D4399C900AD4296 /* StoreDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDAO.swift; sourceTree = "<group>"; };
+		5B896FA11D439D6400AD4296 /* StoreInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreInformationViewController.swift; sourceTree = "<group>"; };
+		5B896FA31D43A1CA00AD4296 /* StoreManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManagementViewController.swift; sourceTree = "<group>"; };
+		5B896FA51D43AC2D00AD4296 /* FullStoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStoreTableViewController.swift; sourceTree = "<group>"; };
+		5B896FA71D43AE8A00AD4296 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		5B896FA91D43B0FC00AD4296 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5B896FAB1D448F8200AD4296 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5B896FAD1D44AB6000AD4296 /* CertificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
+		5B896FAF1D44FC2800AD4296 /* FullStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStoreViewController.swift; sourceTree = "<group>"; };
+		5BCEBFBC1D5F0BA4003D9D3D /* EmployManageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployManageTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B7553A01D3E510700CECDAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B75539A1D3E510700CECDAB = {
+			isa = PBXGroup;
+			children = (
+				5B7553A51D3E510700CECDAB /* HanIum */,
+				5B7553A41D3E510700CECDAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B7553A41D3E510700CECDAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B7553A31D3E510700CECDAB /* HanIum.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B7553A51D3E510700CECDAB /* HanIum */ = {
+			isa = PBXGroup;
+			children = (
+				5BCEBFBC1D5F0BA4003D9D3D /* EmployManageTableViewController.swift */,
+				5B7553A61D3E510700CECDAB /* AppDelegate.swift */,
+				5B7553A81D3E510700CECDAB /* ViewController.swift */,
+				30D84B621D436466003F27C0 /* CouponCell.swift */,
+				30D84B661D43669D003F27C0 /* CouponTableViewController.swift */,
+				5B7553AD1D3E510700CECDAB /* Assets.xcassets */,
+				30AAB5231D41EB46005B178B /* Main.storyboard */,
+				5B896FAF1D44FC2800AD4296 /* FullStoreViewController.swift */,
+				5B896FAD1D44AB6000AD4296 /* CertificationViewController.swift */,
+				5B896FAB1D448F8200AD4296 /* SettingViewController.swift */,
+				5B896FA91D43B0FC00AD4296 /* DetailViewController.swift */,
+				5B896FA51D43AC2D00AD4296 /* FullStoreTableViewController.swift */,
+				5B896FA71D43AE8A00AD4296 /* StoreCell.swift */,
+				5B896FA31D43A1CA00AD4296 /* StoreManagementViewController.swift */,
+				5B896FA11D439D6400AD4296 /* StoreInformationViewController.swift */,
+				30AAB5211D40973A005B178B /* PresentViewController.swift */,
+				30AAB51D1D408757005B178B /* StampUseViewController.swift */,
+				30446B931D3F665A0067A8FB /* StampViewController.swift */,
+				5B7553B21D3E510700CECDAB /* Info.plist */,
+				30446B8B1D3F3FA90067A8FB /* JoinViewController.swift */,
+				30446B8D1D3F4FA30067A8FB /* StoreEntity.swift */,
+				30446B8F1D3F4FB90067A8FB /* UserEntity.swift */,
+				30446B911D3F4FF50067A8FB /* UserDAO.swift */,
+				30446B971D3F75990067A8FB /* StampEntity.swift */,
+				30446B991D3F77390067A8FB /* StampList.swift */,
+				30D84B561D426194003F27C0 /* ModifyUserViewController.swift */,
+				30D84B581D434196003F27C0 /* CouponEntity.swift */,
+				30D84B5C1D434D9C003F27C0 /* CouponList.swift */,
+				5B896F9D1D43995600AD4296 /* JoinStoreViewController.swift */,
+				5B896F9F1D4399C900AD4296 /* StoreDAO.swift */,
+			);
+			path = HanIum;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B7553A21D3E510700CECDAB /* HanIum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B7553B51D3E510700CECDAB /* Build configuration list for PBXNativeTarget "HanIum" */;
+			buildPhases = (
+				5B75539F1D3E510700CECDAB /* Sources */,
+				5B7553A01D3E510700CECDAB /* Frameworks */,
+				5B7553A11D3E510700CECDAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HanIum;
+			productName = HanIum;
+			productReference = 5B7553A31D3E510700CECDAB /* HanIum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B75539B1D3E510700CECDAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = rentdotcom;
+				TargetAttributes = {
+					5B7553A21D3E510700CECDAB = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 43B45PH9K2;
+					};
+				};
+			};
+			buildConfigurationList = 5B75539E1D3E510700CECDAB /* Build configuration list for PBXProject "HanIum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B75539A1D3E510700CECDAB;
+			productRefGroup = 5B7553A41D3E510700CECDAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B7553A21D3E510700CECDAB /* HanIum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B7553A11D3E510700CECDAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7553AE1D3E510700CECDAB /* Assets.xcassets in Resources */,
+				30AAB5251D41EB46005B178B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B75539F1D3E510700CECDAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B896FA01D4399C900AD4296 /* StoreDAO.swift in Sources */,
+				5B896FA61D43AC2D00AD4296 /* FullStoreTableViewController.swift in Sources */,
+				5B896FAA1D43B0FC00AD4296 /* DetailViewController.swift in Sources */,
+				30D84B591D434196003F27C0 /* CouponEntity.swift in Sources */,
+				5B7553A91D3E510700CECDAB /* ViewController.swift in Sources */,
+				30446B9A1D3F77390067A8FB /* StampList.swift in Sources */,
+				30446B981D3F75990067A8FB /* StampEntity.swift in Sources */,
+				5B896FB01D44FC2800AD4296 /* FullStoreViewController.swift in Sources */,
+				5B896FAE1D44AB6000AD4296 /* CertificationViewController.swift in Sources */,
+				30D84B571D426194003F27C0 /* ModifyUserViewController.swift in Sources */,
+				30D84B671D43669D003F27C0 /* CouponTableViewController.swift in Sources */,
+				5BCEBFBD1D5F0BA4003D9D3D /* EmployManageTableViewController.swift in Sources */,
+				30446B941D3F665A0067A8FB /* StampViewController.swift in Sources */,
+				30446B921D3F4FF50067A8FB /* UserDAO.swift in Sources */,
+				5B896FAC1D448F8200AD4296 /* SettingViewController.swift in Sources */,
+				30AAB51E1D408757005B178B /* StampUseViewController.swift in Sources */,
+				5B896F9E1D43995600AD4296 /* JoinStoreViewController.swift in Sources */,
+				5B896FA21D439D6400AD4296 /* StoreInformationViewController.swift in Sources */,
+				30446B8C1D3F3FA90067A8FB /* JoinViewController.swift in Sources */,
+				30AAB5221D40973A005B178B /* PresentViewController.swift in Sources */,
+				30D84B5D1D434D9C003F27C0 /* CouponList.swift in Sources */,
+				30446B8E1D3F4FA30067A8FB /* StoreEntity.swift in Sources */,
+				5B896FA81D43AE8A00AD4296 /* StoreCell.swift in Sources */,
+				30446B901D3F4FB90067A8FB /* UserEntity.swift in Sources */,
+				5B7553A71D3E510700CECDAB /* AppDelegate.swift in Sources */,
+				30D84B631D436466003F27C0 /* CouponCell.swift in Sources */,
+				5B896FA41D43A1CA00AD4296 /* StoreManagementViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		30AAB5231D41EB46005B178B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30AAB5241D41EB46005B178B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B7553B31D3E510700CECDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B7553B41D3E510700CECDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B7553B61D3E510700CECDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = HanIum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codershigh.HanIum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		5B7553B71D3E510700CECDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = HanIum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codershigh.HanIum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B75539E1D3E510700CECDAB /* Build configuration list for PBXProject "HanIum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7553B31D3E510700CECDAB /* Debug */,
+				5B7553B41D3E510700CECDAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B7553B51D3E510700CECDAB /* Build configuration list for PBXNativeTarget "HanIum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7553B61D3E510700CECDAB /* Debug */,
+				5B7553B71D3E510700CECDAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B75539B1D3E510700CECDAB /* Project object */;
+}
