@@ -19,7 +19,7 @@ class StampUseViewController: UIViewController {
     @IBOutlet weak var stampScrollView: UIScrollView!
     @IBOutlet weak var upUIView: UIView!
     var imageView: UIImageView!
-    var upimageView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,23 +62,23 @@ class StampUseViewController: UIViewController {
         var scrollViewHeight = 0
         for i in 0..<(stampNeed/5) {
             for j in 0..<5{
-                self.imageView = UIImageView(image: UIImage(named: "nocheck.png"))
+                
                 if count > 0 {
-                    self.upimageView = UIImageView(image: UIImage(named: "check.png"))
-                    upimageView.frame = CGRect(x: (8+69*j), y: (30+58*i), width: 50, height: 50)
+                    self.imageView = UIImageView(image: UIImage(named: "check.png"))
                     count = count - 1
-                    upUIView.addSubview(upimageView)
                     //                    scrollViewHeight = 30+58*(i+1)
                 }
-                
-                imageView.frame = CGRect(x: (8+69*j), y: (30+58*i), width: 50, height: 50)
+                else{
+                    self.imageView = UIImageView(image: UIImage(named: "nocheck.png"))
+                }
+                imageView.frame = CGRect(x: (69*j), y: (58*i), width: 50, height: 50)
                 upUIView.addSubview(imageView)
                 
                 
             }
         }
         scrollViewHeight = 30+58*(stampNeed/5+1)
-        stampScrollView.contentSize = CGSize(width: 353.0, height: Double(scrollViewHeight))
+        stampScrollView.contentSize = CGSize(width: 353.0, height: Double(scrollViewHeight-80))
         
     }
     

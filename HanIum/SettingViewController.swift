@@ -13,6 +13,11 @@ class SettingViewController: UITableViewController {
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +30,9 @@ class SettingViewController: UITableViewController {
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
         
+        nameLabel.text = me?.name
+        phoneLabel.text = me?.phone
+        emailLabel.text = me?.email
         
         emailButton.roundButton(0.2)
         callButton.roundButton(0.2)

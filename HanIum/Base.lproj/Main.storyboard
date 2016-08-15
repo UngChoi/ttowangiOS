@@ -667,7 +667,10 @@
                     <connections>
                         <outlet property="callButton" destination="yj9-ZZ-SqI" id="rDK-Qg-81N"/>
                         <outlet property="emailButton" destination="DXQ-Yo-OcP" id="UB8-4z-aJd"/>
+                        <outlet property="emailLabel" destination="7nH-N5-y9u" id="vWD-8r-hyf"/>
                         <outlet property="facebookButton" destination="xDi-Vp-QbV" id="Vka-pg-0b7"/>
+                        <outlet property="nameLabel" destination="Wio-cH-x7e" id="kCS-ce-8Tk"/>
+                        <outlet property="phoneLabel" destination="L5b-VI-MXr" id="upb-Px-wwK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WcO-Hz-wYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
