@@ -30,6 +30,9 @@ class StoreManagementViewController: UIViewController {
         let logo = UIImage(named: "logo_3")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
+        
+        
+        
     }
 
 

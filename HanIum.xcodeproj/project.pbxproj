@@ -14,6 +14,10 @@
 		30446B941D3F665A0067A8FB /* StampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B931D3F665A0067A8FB /* StampViewController.swift */; };
 		30446B981D3F75990067A8FB /* StampEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B971D3F75990067A8FB /* StampEntity.swift */; };
 		30446B9A1D3F77390067A8FB /* StampList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30446B991D3F77390067A8FB /* StampList.swift */; };
+		30A62E0D1D62C8C90051B883 /* CouponManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A62E0C1D62C8C90051B883 /* CouponManageViewController.swift */; };
+		30A62E0F1D62C8F40051B883 /* ManageMyStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A62E0E1D62C8F40051B883 /* ManageMyStoreViewController.swift */; };
+		30A62E111D62C9120051B883 /* ManageWorkersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A62E101D62C9120051B883 /* ManageWorkersViewController.swift */; };
+		30A62E131D62C9400051B883 /* ManageEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A62E121D62C9400051B883 /* ManageEventViewController.swift */; };
 		30AAB51E1D408757005B178B /* StampUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB51D1D408757005B178B /* StampUseViewController.swift */; };
 		30AAB5221D40973A005B178B /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB5211D40973A005B178B /* PresentViewController.swift */; };
 		30AAB5251D41EB46005B178B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AAB5231D41EB46005B178B /* Main.storyboard */; };
@@ -22,6 +26,7 @@
 		30D84B591D434196003F27C0 /* CouponEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D84B581D434196003F27C0 /* CouponEntity.swift */; };
 		30D84B631D436466003F27C0 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D84B621D436466003F27C0 /* CouponCell.swift */; };
 		30D84B671D43669D003F27C0 /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D84B661D43669D003F27C0 /* CouponTableViewController.swift */; };
+		30DC7DB81D629DDA00F69BEE /* StoreTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DC7DB71D629DDA00F69BEE /* StoreTabbarController.swift */; };
 		5B7553A71D3E510700CECDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7553A61D3E510700CECDAB /* AppDelegate.swift */; };
 		5B7553A91D3E510700CECDAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7553A81D3E510700CECDAB /* ViewController.swift */; };
 		5B7553AE1D3E510700CECDAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7553AD1D3E510700CECDAB /* Assets.xcassets */; };
@@ -46,6 +51,10 @@
 		30446B931D3F665A0067A8FB /* StampViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampViewController.swift; sourceTree = "<group>"; };
 		30446B971D3F75990067A8FB /* StampEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampEntity.swift; sourceTree = "<group>"; };
 		30446B991D3F77390067A8FB /* StampList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampList.swift; sourceTree = "<group>"; };
+		30A62E0C1D62C8C90051B883 /* CouponManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponManageViewController.swift; sourceTree = "<group>"; };
+		30A62E0E1D62C8F40051B883 /* ManageMyStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageMyStoreViewController.swift; sourceTree = "<group>"; };
+		30A62E101D62C9120051B883 /* ManageWorkersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageWorkersViewController.swift; sourceTree = "<group>"; };
+		30A62E121D62C9400051B883 /* ManageEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageEventViewController.swift; sourceTree = "<group>"; };
 		30AAB51D1D408757005B178B /* StampUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampUseViewController.swift; sourceTree = "<group>"; };
 		30AAB5211D40973A005B178B /* PresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
 		30AAB5241D41EB46005B178B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +63,7 @@
 		30D84B581D434196003F27C0 /* CouponEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponEntity.swift; sourceTree = "<group>"; };
 		30D84B621D436466003F27C0 /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
 		30D84B661D43669D003F27C0 /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
+		30DC7DB71D629DDA00F69BEE /* StoreTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTabbarController.swift; sourceTree = "<group>"; };
 		5B7553A31D3E510700CECDAB /* HanIum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanIum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7553A61D3E510700CECDAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B7553A81D3E510700CECDAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +119,11 @@
 				30D84B661D43669D003F27C0 /* CouponTableViewController.swift */,
 				5B7553AD1D3E510700CECDAB /* Assets.xcassets */,
 				30AAB5231D41EB46005B178B /* Main.storyboard */,
+				30A62E121D62C9400051B883 /* ManageEventViewController.swift */,
+				30A62E101D62C9120051B883 /* ManageWorkersViewController.swift */,
+				30A62E0E1D62C8F40051B883 /* ManageMyStoreViewController.swift */,
+				30A62E0C1D62C8C90051B883 /* CouponManageViewController.swift */,
+				30DC7DB71D629DDA00F69BEE /* StoreTabbarController.swift */,
 				5B896FAF1D44FC2800AD4296 /* FullStoreViewController.swift */,
 				5B896FAD1D44AB6000AD4296 /* CertificationViewController.swift */,
 				5B896FAB1D448F8200AD4296 /* SettingViewController.swift */,
@@ -209,7 +224,10 @@
 			files = (
 				5B896FA01D4399C900AD4296 /* StoreDAO.swift in Sources */,
 				5B896FA61D43AC2D00AD4296 /* FullStoreTableViewController.swift in Sources */,
+				30A62E0D1D62C8C90051B883 /* CouponManageViewController.swift in Sources */,
 				5B896FAA1D43B0FC00AD4296 /* DetailViewController.swift in Sources */,
+				30A62E131D62C9400051B883 /* ManageEventViewController.swift in Sources */,
+				30DC7DB81D629DDA00F69BEE /* StoreTabbarController.swift in Sources */,
 				30D84B591D434196003F27C0 /* CouponEntity.swift in Sources */,
 				5B7553A91D3E510700CECDAB /* ViewController.swift in Sources */,
 				30446B9A1D3F77390067A8FB /* StampList.swift in Sources */,
@@ -230,10 +248,12 @@
 				30AAB5221D40973A005B178B /* PresentViewController.swift in Sources */,
 				30446B8E1D3F4FA30067A8FB /* StoreEntity.swift in Sources */,
 				5B896FA81D43AE8A00AD4296 /* StoreCell.swift in Sources */,
+				30A62E0F1D62C8F40051B883 /* ManageMyStoreViewController.swift in Sources */,
 				30446B901D3F4FB90067A8FB /* UserEntity.swift in Sources */,
 				5B7553A71D3E510700CECDAB /* AppDelegate.swift in Sources */,
 				30D84B631D436466003F27C0 /* CouponCell.swift in Sources */,
 				5B896FA41D43A1CA00AD4296 /* StoreManagementViewController.swift in Sources */,
+				30A62E111D62C9120051B883 /* ManageWorkersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
