@@ -24,15 +24,15 @@ class SettingViewController: UITableViewController {
         //#ff005c
         //button.backgroundColor =
         self.tableView.separatorColor = UIColor(hex: "#ff005c")
-        self.tableView.separatorInset = UIEdgeInsetsZero
+        self.tableView.separatorInset = UIEdgeInsets.zero
         
         let logo = UIImage(named: "logo_3")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
         
-        nameLabel.text = me?.name
-        phoneLabel.text = me?.phone
-        emailLabel.text = me?.email
+        nameLabel.text = me.name
+        phoneLabel.text = me.phone
+        emailLabel.text = me.email
         
         emailButton.roundButton(0.2)
         callButton.roundButton(0.2)
@@ -115,15 +115,15 @@ class SettingViewController: UITableViewController {
 extension UIColor {
     
     convenience init(hex:String) {
-        let hexStr:NSString = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        let scan = NSScanner(string: hexStr as String)
+        let hexStr:NSString = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) as NSString
+        let scan = Scanner(string: hexStr as String)
         
         if (hexStr.hasPrefix("#")) {
             scan.scanLocation = 1
         }
         
         var color:UInt32 = 0
-        scan.scanHexInt(&color)
+        scan.scanHexInt32(&color)
         
         let mask = 0x000000FF
         let r = Int(color >> 16) & mask
@@ -152,8 +152,8 @@ extension UIColor {
     
 }
 extension UIButton{
-    func roundButton(corner:CGFloat){
-        self.layer.borderColor  = UIColor(hex: "#ff005c").CGColor
+    func roundButton(_ corner:CGFloat){
+        self.layer.borderColor  = UIColor(hex: "#ff005c").cgColor
         self.layer.borderWidth  = 2.0
         self.layer.cornerRadius = corner * self.bounds.size.width
     }

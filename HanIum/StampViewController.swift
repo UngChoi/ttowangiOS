@@ -8,7 +8,12 @@
 
 import UIKit
 var users = UserDAO.sharedInstance()
-var me = users.searchUserName("최웅규")
+//var me = util.searchUser(myPhone)
+var me = util.searchUser("01035620378")
+//me.setStampList(util.loadCouponStampList(me.id).0)
+//me.stampList = util.loadCouponStampList(me.id).0
+
+
 var storeIndex = 0
 
 //self.stampList[0].storeImage = "starbucksCard"
@@ -27,16 +32,17 @@ class StampViewController: UIViewController {
     @IBOutlet weak var blackBackgroundView: UIView!
     @IBOutlet weak var couponAddress: UILabel!
     @IBOutlet weak var couponCount: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
 
-    @IBAction func changedSegment(sender: UISegmentedControl) {
+    @IBAction func changedSegment(_ sender: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            stampView.hidden = false
-            couponView.hidden = true
+            stampView.isHidden = false
+            couponView.isHidden = true
         case 1:
-            stampView.hidden = true
-            couponView.hidden = false
+            stampView.isHidden = true
+            couponView.isHidden = false
         default:
             break; 
         }
@@ -48,22 +54,29 @@ class StampViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        users.addNewItem(me)ut
+        
         // navigation title 상단에 로고
+        util.loadCouponStampList(me.id)
         let logo = UIImage(named: "logo_3")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
 
-
+//        util.searchUser(myPhone)
         //array.sortInPlace { $0.selected && !$1.selected }
-        stampView .hidden = false
-        couponView.hidden = true
-        if me?.stampList.count <= 0 {
+        stampView .isHidden = false
+        couponView.isHidden = true
+//        print(me.stampList.count)
+        if me.stampList.count <= 0 {
             couponName.text = "아무것도 없음"
+            print("아무것도없는데")
         }
         else {
             
-            let image = me?.stampList[storeIndex].storeImage
-            couponImage.image = UIImage(named:image!)
+//            let image = me.stampList[storeIndex].storeImage
+            couponImage.image = me.stampList[storeIndex].storeImages
+            
+            couponName.text = me.stampList[storeIndex].storeName
             
             // stores를 stampList로 바꿔야됨
 //            let image = stores[storeIndex].image
@@ -81,14 +94,14 @@ class StampViewController: UIViewController {
             // 윗부분만 둥글게
             let maskLayer = CAShapeLayer()
 
-            maskLayer.path = UIBezierPath(roundedRect: couponImage.bounds, byRoundingCorners: UIRectCorner.TopLeft.union(.TopRight), cornerRadii: CGSize(width: 10, height: 10)).CGPath
+            maskLayer.path = UIBezierPath(roundedRect: couponImage.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 10, height: 10)).cgPath
             
             couponImage.layer.mask = maskLayer
             
             // 그림자 부분
             let backLayer = CAShapeLayer()
             
-            backLayer.path = UIBezierPath(roundedRect: blackBackgroundView.bounds, byRoundingCorners: UIRectCorner.TopLeft.union(.TopRight), cornerRadii: CGSize(width: 10, height: 10)).CGPath
+            backLayer.path = UIBezierPath(roundedRect: blackBackgroundView.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 10, height: 10)).cgPath
             blackBackgroundView.layer.mask = backLayer
         }
     }
@@ -98,12 +111,12 @@ class StampViewController: UIViewController {
     }
     
     
-    @IBAction func prevCoupon(sender: AnyObject) {
-        if me?.stampList.count < 2 {
+    @IBAction func prevCoupon(_ sender: AnyObject) {
+        if me.stampList.count < 2 {
             return
         }
         
-        storeIndex = (storeIndex+(me?.stampList.count)!-1) % (me?.stampList.count)!
+        storeIndex = (storeIndex+(me.stampList.count)-1) % (me.stampList.count)
         switch self.childViewControllers[0]{
             
         case let itemups as StampUseViewController :
@@ -115,8 +128,9 @@ class StampViewController: UIViewController {
         }
         
         
-        let image = me?.stampList[storeIndex].storeImage
-        couponImage.image = UIImage(named:image!)
+        couponImage.image = me.stampList[storeIndex].storeImages
+        
+        couponName.text = me.stampList[storeIndex].storeName
         // stores를 stampList로 바꿔야됨
 //        let image = stores[storeIndex].image
 //        couponImage.image = UIImage(named: image)
@@ -133,14 +147,14 @@ class StampViewController: UIViewController {
         // 윗부분만 둥글게
         let maskLayer = CAShapeLayer()
         
-        maskLayer.path = UIBezierPath(roundedRect: couponImage.bounds, byRoundingCorners: UIRectCorner.TopLeft.union(.TopRight), cornerRadii: CGSize(width: 10, height: 10)).CGPath
+        maskLayer.path = UIBezierPath(roundedRect: couponImage.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 10, height: 10)).cgPath
         
         couponImage.layer.mask = maskLayer
         
         // 그림자 부분
         let backLayer = CAShapeLayer()
         
-        backLayer.path = UIBezierPath(roundedRect: blackBackgroundView.bounds, byRoundingCorners: UIRectCorner.TopLeft.union(.TopRight), cornerRadii: CGSize(width: 10, height: 10)).CGPath
+        backLayer.path = UIBezierPath(roundedRect: blackBackgroundView.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 10, height: 10)).cgPath
         blackBackgroundView.layer.mask = backLayer
         
         //storeIndex = (storeIndex+(me?.stampList.count)!-1) % (me?.stampList.count)!
@@ -151,11 +165,11 @@ class StampViewController: UIViewController {
         //        couponName.text = "이카드는 \((me?.stampList[storeIndex].storeID)!)"
     } //이전 쿠폰 선택
     
-    @IBAction func nextCoupon(sender: AnyObject) {
-        if me?.stampList.count < 2 {
+    @IBAction func nextCoupon(_ sender: AnyObject) {
+        if me.stampList.count < 2 {
             return
         }
-        storeIndex = (storeIndex+1)%(me?.stampList.count)!
+        storeIndex = (storeIndex+1)%(me.stampList.count)
         switch self.childViewControllers[0]{
             
         case let itemups as StampUseViewController :
@@ -165,15 +179,16 @@ class StampViewController: UIViewController {
             print("????????")
             break
         }
-        let image = me?.stampList[storeIndex].storeImage
-        couponImage.image = UIImage(named:image!)
+        couponImage.image = me.stampList[storeIndex].storeImages
+        
+        couponName.text = me.stampList[storeIndex].storeName
         // stores를 stampList로 바꿔야됨
 //        let image = stores[storeIndex].image
 //        couponImage.image = UIImage(named: image)
 //
 //        let storeName = stores[storeIndex].storeName
 //        couponName.text = storeName
-//        
+//
 //        let address = stores[storeIndex].address
 //        couponAddress.text = address
 //
@@ -183,14 +198,14 @@ class StampViewController: UIViewController {
         // 윗부분만 둥글게
         let maskLayer = CAShapeLayer()
         
-        maskLayer.path = UIBezierPath(roundedRect: couponImage.bounds, byRoundingCorners: UIRectCorner.TopLeft.union(.TopRight), cornerRadii: CGSize(width: 10, height: 10)).CGPath
+        maskLayer.path = UIBezierPath(roundedRect: couponImage.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 10, height: 10)).cgPath
         
         couponImage.layer.mask = maskLayer
         
         // 그림자 부분
         let backLayer = CAShapeLayer()
         
-        backLayer.path = UIBezierPath(roundedRect: blackBackgroundView.bounds, byRoundingCorners: UIRectCorner.TopLeft.union(.TopRight), cornerRadii: CGSize(width: 10, height: 10)).CGPath
+        backLayer.path = UIBezierPath(roundedRect: blackBackgroundView.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 10, height: 10)).cgPath
         blackBackgroundView.layer.mask = backLayer
 
 //        storeIndex = (storeIndex+1)%(me?.stampList.count)!

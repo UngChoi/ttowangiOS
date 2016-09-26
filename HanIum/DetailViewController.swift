@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
 
-        NSThread.detachNewThreadSelector(#selector(DetailViewController.displayMyMap), toTarget: self, withObject: nil)
+        Thread.detachNewThreadSelector(#selector(DetailViewController.displayMyMap), toTarget: self, with: nil)
         
         detailImageView.image = mImage
         
@@ -64,7 +64,7 @@ class DetailViewController: UIViewController {
     
     //segue를 통해 넘어온 데이터
     //UILabel과 같은것에 직접접근하여 수정할수없다.
-    func update(image:UIImage!, latitude:Double!, longitude:Double!, name:String!, address:String!, time:String!, info:String!, call:String!, menu:String!){
+    func update(_ image:UIImage!, latitude:Double!, longitude:Double!, name:String!, address:String!, time:String!, info:String!, call:String!, menu:String!){
         
         mImage = image
         mLatitude  = latitude

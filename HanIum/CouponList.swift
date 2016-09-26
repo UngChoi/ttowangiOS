@@ -19,22 +19,22 @@ class CouponList {
         canUseCouponCnt = 0
     }
     
-    func addCoupon(coupon : CouponEntity) {
+    func addCoupon(_ coupon : CouponEntity) {
         coupons?.append(coupon)
         couponCnt = couponCnt + 1
         canUseCouponCnt = canUseCouponCnt + 1
     }
-    func useCoupon(couponNum : String) -> Bool{
+    func useCoupon(_ couponNum : Int) -> Bool{
         let couponIndex = self.isCoupon(couponNum)
         if couponIndex == -1 {
             return false
         }
-        coupons![couponIndex].isUsed = true
+        coupons![couponIndex].isUsed = 0
         canUseCouponCnt = canUseCouponCnt - 1
         return true
     }
     
-    func isCoupon(couponNum : String) -> Int {
+    func isCoupon(_ couponNum : Int) -> Int {
         for i in 0..<coupons!.count {
             if(couponNum == coupons![i].couponNum){
                 return i

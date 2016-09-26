@@ -12,8 +12,8 @@ class PresentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.clearColor()
-        view.opaque = false
+        view.backgroundColor = UIColor.clear
+        view.isOpaque = false
         // Do any additional setup after loading the view.
     }
 
@@ -22,12 +22,12 @@ class PresentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func OkButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func OkButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func cancleButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancleButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 
     /*

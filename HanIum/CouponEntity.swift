@@ -10,28 +10,46 @@ import Foundation
 
 class CouponEntity {
     //    static var couponCnt = 0
-    var couponNum : String
-    var couponStoreId : String
+    var couponNum : Int
+    var couponStoreId : Int
     var couponName : String
     var stampNeed : Int
-    var isUsed : Bool
+    var isUsed : Int
+    
     var couponImg : String = ""
     
     init() {
         self.couponName = ""
-        self.couponStoreId = ""
-        self.couponNum = ""
+        self.couponStoreId = 0
+        self.couponNum = 0
         self.stampNeed = 1
-        self.isUsed = true
+        self.isUsed = 0
+        
     }
     
-    init(couponName : String, couponStoreId :String, phone : String, stampNeed : Int, couponCnt : Int) {
+    init(couponName : String, couponStoreId :Int, phone : String, stampNeed : Int, couponCnt : Int) {
         
         self.couponName = couponName
         self.couponStoreId = couponStoreId
         self.stampNeed = stampNeed
-        isUsed = false
-        self.couponNum = self.couponStoreId + phone + String(couponCnt)
+        isUsed = 1
+        self.couponNum = 0
     }
+    init(couponName : String, couponStoreId :Int, couponNum : Int,phone : String, stampNeed : Int, couponCnt : Int, isUsed : Int) {
+        
+        self.couponName = couponName
+        self.couponStoreId = couponStoreId
+        self.stampNeed = stampNeed
+        self.isUsed = isUsed
+        self.couponNum = couponNum
+    }
+    init(couponName : String, couponStoreId : Int, couponNum : Int, isUsed : Int, stampNeed : Int){
+        self.couponName = couponName
+        self.couponStoreId = couponStoreId
+        self.isUsed = isUsed
+        self.couponNum = couponNum
+        self.stampNeed = stampNeed
+    }
+//    init(couponNum)
     
 }

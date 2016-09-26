@@ -21,10 +21,10 @@ class StoreInformationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    @IBAction func unwindToStoreInformation(segue:UIStoryboardSegue){
+    @IBAction func unwindToStoreInformation(_ segue:UIStoryboardSegue){
     }
     
-    func updateStore(storeSegue:StoreEntity){
+    func updateStore(_ storeSegue:StoreEntity){
         print("update")
         store.updateStore(storeSegue)
         store.printStore(storeSegue)

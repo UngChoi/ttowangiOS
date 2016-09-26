@@ -25,15 +25,16 @@ class UserDAO {
         self.userList = []
     }
     func addNewItem(){
-        var temp : UserEntity
-        temp = UserEntity(name:"최웅규", phone:"010-5532-6592", birth:NSDate(), gender:true, code:1, email:"shs7575@gmail.com");
-        
-        self.userList.append(temp)
+//        var temp : UserEntity
+//        temp = UserEntity(name:"최웅규", phone:"010-5532-6592", birth:NSDate(), gender:true, code:1, email:"shs7575@gmail.com");
+//        
+//        self.userList.append(temp)
     }
-    func addNewItem(user:UserEntity){
+    func addNewItem(_ user:UserEntity){
         userList.append(user)
     }
-    func searchUserName(name:String) -> UserEntity? {
+    func searchUserName(_ name:String) -> UserEntity? {
+        print("aaa")
         for i in 0..<userList.count {
             if(name == userList[i].name){
                 return userList[i]
@@ -41,7 +42,7 @@ class UserDAO {
         }
         return nil
     }
-    func searchUserId(id:String) -> UserEntity? {
+    func searchUserId(_ id:Int) -> UserEntity? {
         for i in 0..<userList.count {
             if(id == userList[i].id){
                 return userList[i]
@@ -54,8 +55,8 @@ class UserDAO {
         return userList.count
     }
     
-    func modifyUserInfoName(sName : String, phone : String, name : String, email : String) -> Bool {
-        var user = self.searchUserName(sName)
+    func modifyUserInfoName(_ sName : String, phone : String, name : String, email : String) -> Bool {
+        let user = self.searchUserName(sName)
         if user == nil {
             return false
         }
@@ -65,8 +66,8 @@ class UserDAO {
         return true
     }
     
-    func modifyUserInfoID(id : String, phone : String, name : String, email : String) -> Bool {
-        var user = self.searchUserId(id)
+    func modifyUserInfoID(_ id : Int, phone : String, name : String, email : String) -> Bool {
+        let user = self.searchUserId(id)
         if user == nil {
             return false
         }

@@ -12,12 +12,12 @@ class StoreCell: UITableViewCell {
     
     var onOff:Bool = false
     var index:Int = -1
-    @IBAction func onOffAction(sender: AnyObject) {
+    @IBAction func onOffAction(_ sender: AnyObject) {
         self.onOff = !self.onOff
         if self.onOff == true{
             
             if  let image = UIImage(named:"heart"){
-                self.heartButton.setImage(image, forState: .Normal)
+                self.heartButton.setImage(image, for: UIControlState())
                 if index != -1 {
                     stores[index].heart = true
                 }
@@ -26,7 +26,7 @@ class StoreCell: UITableViewCell {
         }
         else{
             if  let image = UIImage(named: "Hearts-50"){
-                self.heartButton.setImage(image, forState: .Normal)
+                self.heartButton.setImage(image, for: UIControlState())
                 
                 if index != -1{
                     stores[index].heart = false

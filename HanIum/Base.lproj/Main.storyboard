@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uaR-yG-aqU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uaR-yG-aqU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -78,22 +78,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="starbucks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc6-LY-cvR">
-                                <rect key="frame" x="136" y="107" width="107" height="25"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="locationWhite" translatesAutoresizingMaskIntoConstraints="NO" id="rH2-bb-U6I">
-                                <rect key="frame" x="150" y="147" width="15" height="15"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="서울시 강남구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1N9-Xy-C1V">
-                                <rect key="frame" x="168" y="144" width="64" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -102,11 +86,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="blackBackgroundView" destination="Ev8-Io-Noj" id="QQg-sF-wC8"/>
-                        <outlet property="couponAddress" destination="1N9-Xy-C1V" id="dvp-nd-FTg"/>
                         <outlet property="couponCount" destination="ph5-Tf-N49" id="aFD-3i-C34"/>
                         <outlet property="couponImage" destination="zfA-qJ-qpJ" id="bw5-7q-Pjf"/>
                         <outlet property="couponName" destination="iVB-xw-RlQ" id="3ue-yS-RzO"/>
                         <outlet property="couponView" destination="HaU-vL-Hle" id="ot4-GQ-kaw"/>
+                        <outlet property="nameLabel" destination="iVB-xw-RlQ" id="VRc-i4-PFb"/>
                         <outlet property="segmentedControl" destination="3V4-T0-Gc8" id="zEJ-mS-Yn4"/>
                         <outlet property="stampView" destination="KWg-Qy-Vc4" id="8uR-Vc-Gfj"/>
                     </connections>
@@ -1148,24 +1132,55 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBy-Kq-4KF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zhd-NB-TLf" id="Ke9-iS-GLC"/>
+                                </connections>
                             </pickerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vSk-Yk-REl">
                                 <rect key="frame" x="0.0" y="137" width="375" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="guB-LC-5t0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="guB-LC-5t0" customClass="CouponManageCell" customModule="HanIum" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="guB-LC-5t0" id="eu4-jV-EnX">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="쿠폰이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="142-Uh-mcQ">
+                                                    <rect key="frame" x="15" y="8" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="혜택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-1N-tam">
+                                                    <rect key="frame" x="191" y="8" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="갯수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpC-8B-o8X">
+                                                    <rect key="frame" x="337" y="7" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="couponBenefit" destination="CC5-1N-tam" id="AYY-PN-xSL"/>
+                                            <outlet property="couponName" destination="142-Uh-mcQ" id="ZlV-DN-kCp"/>
+                                            <outlet property="couponNeed" destination="gpC-8B-o8X" id="jbS-0s-IXs"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myStorePicker" destination="nBy-Kq-4KF" id="VKJ-h0-Fg4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAV-za-sBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1175,7 +1190,7 @@
         <scene sceneID="pHN-ZB-4iv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GS5-Rt-deF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="홈" image="Home-50" id="pW2-mx-LFN"/>
+                    <tabBarItem key="tabBarItem" title="홈" id="pW2-mx-LFN"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dTq-0B-TbM">
@@ -1256,7 +1271,6 @@
                                 <state key="normal" title="신청하기"/>
                                 <connections>
                                     <action selector="applyStore:" destination="Dwf-uv-Yvk" eventType="touchUpInside" id="xfN-sy-a9a"/>
-                                    <segue destination="C9G-f0-NFH" kind="show" id="a87-Us-4nu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1423,7 +1437,7 @@
         <scene sceneID="WE6-2T-YtV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sql-Eb-EXW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="전체매장" image="Price Tag-50" id="ygq-4B-inQ"/>
+                    <tabBarItem key="tabBarItem" title="전체매장" id="ygq-4B-inQ"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S5h-eZ-Snf">
@@ -1444,7 +1458,7 @@
         <scene sceneID="rlq-Ug-dMJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NZu-Yy-awW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="이벤트" image="Gift-50" id="uFU-ep-SxC"/>
+                    <tabBarItem key="tabBarItem" title="이벤트" id="uFU-ep-SxC"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7cv-OJ-D6s">
@@ -1465,7 +1479,7 @@
         <scene sceneID="BfO-58-qAi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vhr-CV-d7x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="설정" image="Settings-50" id="zDK-xE-UQd"/>
+                    <tabBarItem key="tabBarItem" title="설정" id="zDK-xE-UQd"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" shadowImage="logo" backIndicatorImage="logo" backIndicatorTransitionMaskImage="logo" id="iGi-nf-66y">
@@ -1507,7 +1521,7 @@
         <scene sceneID="nnC-Qe-L30">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9b7-KK-g4g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MY SHOP" image="Info-50" id="RBa-ju-Mcf"/>
+                    <tabBarItem key="tabBarItem" title="MY SHOP" id="RBa-ju-Mcf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OlT-jk-Ahd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1527,7 +1541,7 @@
         <scene sceneID="UXO-vy-9pH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qvp-C0-d9G" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="RECENT" image="Todo List-50" id="hec-ZN-eqS"/>
+                    <tabBarItem key="tabBarItem" title="RECENT" id="hec-ZN-eqS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CKC-bq-gTa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1547,7 +1561,7 @@
         <scene sceneID="bPg-v7-v3W">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="czo-rh-G2I" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="STAMP" image="Rubber Stamp-50" id="BTI-LF-GG6"/>
+                    <tabBarItem key="tabBarItem" title="STAMP" id="BTI-LF-GG6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ytW-aF-OnE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1567,7 +1581,7 @@
         <scene sceneID="IUt-Es-ApZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jke-nO-gGb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="SETTINGS" image="Settings-50" id="uux-9H-99C"/>
+                    <tabBarItem key="tabBarItem" title="SETTINGS" id="uux-9H-99C"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MDK-LE-B9a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1620,18 +1634,6 @@
                                     <segue destination="rnW-Fp-59g" kind="modal" id="QZ1-Sf-Mtj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFN-Na-oi6">
-                                <rect key="frame" x="245" y="256" width="30" height="30"/>
-                                <state key="normal" title="적립"/>
-                                <connections>
-                                    <action selector="stampButton:" destination="Oeg-UW-jYH" eventType="touchUpInside" id="j7S-53-0aR"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-fz-tGb">
-                                <rect key="frame" x="77" y="257" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQ5-Wd-Mye">
                                 <rect key="frame" x="11" y="20" width="353" height="167"/>
                                 <subviews>
@@ -1649,7 +1651,6 @@
                         <outlet property="couponChangeButton" destination="OZh-pT-dnR" id="Vot-cT-lNc"/>
                         <outlet property="giftButton" destination="MNX-gf-7AW" id="AIC-1c-j4e"/>
                         <outlet property="stampScrollView" destination="TQ5-Wd-Mye" id="FrS-HO-c4i"/>
-                        <outlet property="storeNameField" destination="TIN-fz-tGb" id="jQW-VC-8xf"/>
                         <outlet property="upUIView" destination="URb-HS-r1Y" id="vgk-IB-7AL"/>
                     </connections>
                 </viewController>
@@ -1793,6 +1794,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYG-IB-37U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98" y="-20"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IQV-Sj-NeK">
@@ -1828,6 +1830,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTU-iQ-lIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-166" y="-340"/>
         </scene>
         <!--Manage Workers View Controller-->
         <scene sceneID="SBq-3s-sqr">
@@ -1843,17 +1846,34 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nci-Cr-xSy">
                                 <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IDO-R3-jvw" id="X5a-sc-ifg"/>
+                                </connections>
                             </pickerView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rHW-Fy-7te">
-                                <rect key="frame" x="0.0" y="137" width="375" height="481"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rHW-Fy-7te">
+                                <rect key="frame" x="0.0" y="129" width="375" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jdL-dJ-I1S">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="40" id="jdL-dJ-I1S">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jdL-dJ-I1S" id="rym-Tn-cuE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f47-NH-DLN">
+                                                    <rect key="frame" x="20" y="8" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy1-Yu-ovQ">
+                                                    <rect key="frame" x="289" y="10" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -1861,6 +1881,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myStorePicker" destination="nci-Cr-xSy" id="VVG-c1-q8P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4b-ay-gkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1880,6 +1903,9 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-dC-FwD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="s3p-jy-vYD" id="qJ7-wC-fgc"/>
+                                </connections>
                             </pickerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Fn-bo-FN9">
                                 <rect key="frame" x="0.0" y="137" width="375" height="481"/>
@@ -1891,6 +1917,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TPu-J6-qtD" id="Ict-Wv-SD3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mf9-Pv-Rhp">
+                                                    <rect key="frame" x="20" y="11" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="매장타입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9r-Bz-RbY">
+                                                    <rect key="frame" x="308" y="11" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -1898,6 +1938,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myStorePicker" destination="ZLL-dC-FwD" id="RbN-4f-UBJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvE-VA-Ntz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1917,6 +1960,9 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQ9-cV-P1I">
                                 <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EMs-P7-aVd" id="zMP-6F-dM2"/>
+                                </connections>
                             </pickerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CAG-F6-XLE">
                                 <rect key="frame" x="0.0" y="137" width="375" height="481"/>
@@ -1935,6 +1981,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myStorePicker" destination="GQ9-cV-P1I" id="ceF-Gd-Oqb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpC-yh-Djm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1952,24 +2001,13 @@
         <image name="Circled 7 " width="100" height="100"/>
         <image name="Circled 8 " width="100" height="100"/>
         <image name="Circled 9 " width="100" height="100"/>
-        <image name="Gift-50" width="25" height="25"/>
-        <image name="Home-50" width="25" height="25"/>
-        <image name="Info-50" width="25" height="25"/>
-        <image name="Price Tag-50" width="25" height="25"/>
         <image name="Rubber Stamp Filled-100" width="100" height="100"/>
-        <image name="Rubber Stamp-50" width="25" height="25"/>
         <image name="Search" width="50" height="50"/>
-        <image name="Settings-50" width="25" height="25"/>
-        <image name="Todo List-50" width="25" height="25"/>
         <image name="cafe" width="133" height="137"/>
         <image name="heart" width="134" height="125"/>
         <image name="locationPink" width="672" height="579"/>
-        <image name="locationWhite" width="700" height="594"/>
         <image name="logo" width="1000" height="1000"/>
         <image name="member" width="102" height="98"/>
         <image name="seto" width="28" height="27"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="W9z-N4-t7d"/>
-    </inferredMetricsTieBreakers>
 </document>

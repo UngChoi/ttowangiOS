@@ -13,17 +13,17 @@ class CouponCell: UITableViewCell {
     @IBOutlet weak var couponImage: UIImageView!
     @IBOutlet weak var couponNum: UILabel!
     @IBOutlet weak var couponButton: UIButton!
-    var coupon = ""
+    var coupon = 0
     
     
-    @IBAction func useCoupon(sender: AnyObject) {
+    @IBAction func useCoupon(_ sender: AnyObject) {
         print("쿠폰사용")
-        me?.couponList.useCoupon(coupon)
-        couponButton.enabled = false;
+        me.couponList.useCoupon(coupon)
+        couponButton.isEnabled = false;
     }
     
     
-    func setCouponNumTo(couponNum: String){
+    func setCouponNumTo(_ couponNum: Int){
         coupon = couponNum
     }
 }

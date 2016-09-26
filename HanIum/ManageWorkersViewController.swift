@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ManageWorkersViewController: UIViewController {
+class ManageWorkersViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var myStorePicker: UIPickerView!
+     let pickOption = ["starbucks", "cofferBean", "GongCha", "ilsang", "hollys"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        myStorePicker.delegate = self
+        myStorePicker.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +25,16 @@ class ManageWorkersViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickOption.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return pickOption[row]
+    }
     /*
     // MARK: - Navigation
 

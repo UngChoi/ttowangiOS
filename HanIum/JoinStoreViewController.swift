@@ -24,17 +24,17 @@ class JoinStoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
     
     //신청하기 버튼 action 처리
-    @IBAction func applyStore(sender: AnyObject) {
+    @IBAction func applyStore(_ sender: AnyObject) {
         guard let storeInfo = newStore() else {
-            self.dismissViewControllerAnimated(true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
             return
         }
         store.addNewStore(storeInfo)
-        print(store.returnListCount())
+//        print(store.returnListCount())
     }
     // textField에서 값가져와서 새로운 StoreEntity생성
     func newStore() -> StoreEntity?{

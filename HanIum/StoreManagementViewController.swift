@@ -89,10 +89,10 @@ class StoreManagementViewController: UIViewController {
         return updateStore
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
         if segue.identifier == "Done"{
-            guard let updateStore = makeInUpdateInformation(), storeInformationVC = segue.destinationViewController as? StoreInformationViewController else {
+            guard let updateStore = makeInUpdateInformation(), let storeInformationVC = segue.destination as? StoreInformationViewController else {
                 return
             }
             

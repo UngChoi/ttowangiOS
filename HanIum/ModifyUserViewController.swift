@@ -20,9 +20,9 @@ class ModifyUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameField.text = me?.name
-        phoneField.text = me?.phone
-        emailField.text = me?.email
+        nameField.text = me.name
+        phoneField.text = me.phone
+        emailField.text = me.email
         // Do any additional setup after loading the view.
     }
 
@@ -31,19 +31,19 @@ class ModifyUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func modification(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func modification(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
         let name = nameField.text!
         let phone = phoneField.text!
         let email = emailField.text!
         if name.isEmpty || phone.isEmpty || email.isEmpty {
             return
         }
-        users.modifyUserInfoID(me!.id, phone: phone, name: name, email: email)
+        users.modifyUserInfoID(me.id, phone: phone, name: name, email: email)
     }
 
-    @IBAction func cancleModificationprintmeemailc(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancleModificationprintmeemailc(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
         
     }
     

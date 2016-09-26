@@ -15,16 +15,16 @@ class CouponTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("???")
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.refreshControl?.addTarget(self, action: #selector(CouponTableViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl?.addTarget(self, action: #selector(CouponTableViewController.refresh(_:)), for: UIControlEvents.valueChanged)
     }
 
-    func refresh(sender:AnyObject)
+    func refresh(_ sender:AnyObject)
     {
         // Updating your data here...
         
@@ -38,39 +38,47 @@ class CouponTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         print("???")
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("???")
-        let rowCount = (me?.couponList.couponCnt)!
-        return rowCount
         
+        let rowCount = (me.couponList.couponCnt)
+        return rowCount
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CouponCell", forIndexPath: indexPath) as! CouponCell
-        guard let service = me?.couponList.coupons![indexPath.row] else{
-            print("아무것도 안되나")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CouponCell", for: indexPath) as! CouponCell
+        
+        if (me.couponList.couponCnt==0){
+            
             return cell
         }
-        cell.couponNum.text = service.couponNum
+//        print("여기까지 안온다")
+        let service = (me.couponList.coupons![(indexPath as NSIndexPath).row]) //else{
+//            print("아무것도 안되나")
+//            
+//            return cell
+//        }
+        
+        print("\(service.couponName)???????")
+        cell.couponNum.text = service.couponName
         
         cell.couponImage.image = UIImage(named : service.couponImg)
         cell.setCouponNumTo(service.couponNum)
         
-        if service.isUsed {
-            cell.couponNum.text = "사용된거"
-            cell.couponButton.enabled = false
+        if service.isUsed==0 {
+//            cell.couponNum.text = "사용된거"
+            cell.couponButton.isEnabled = false
         }
         else {
-            cell.couponNum.text = "사용안된거"
-            cell.couponButton.enabled = true
+//            cell.couponNum.text = "사용안된거"
+            cell.couponButton.isEnabled = true
         }
         return cell
         

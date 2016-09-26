@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ManageMyStoreViewController: UIViewController {
+class ManageMyStoreViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var myStorePicker: UIPickerView!
+     let pickOption = ["starbucks", "cofferBean", "GongCha", "ilsang", "hollys"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        myStorePicker.delegate = self
+        myStorePicker.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +27,16 @@ class ManageMyStoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickOption.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return pickOption[row]
+    }
     /*
     // MARK: - Navigation
 

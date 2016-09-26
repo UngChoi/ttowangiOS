@@ -14,14 +14,14 @@ class StoreTabbarController: UITabBarController {
         super.viewDidLoad()
         
 
-        self.parentViewController?.tabBarController?.tabBar.hidden = true
+        self.parent?.tabBarController?.tabBar.isHidden = true
         //이전의 탭바를 숨기는 코드
         
-        self.parentViewController?.navigationController?.navigationBarHidden = true
-        switch self.parentViewController{
+        self.parent?.navigationController?.isNavigationBarHidden = true
+        switch self.parent{
             
         case let itemups as UINavigationController :
-            itemups.navigationBarHidden = true
+            itemups.isNavigationBarHidden = true
             break;
         default :
             print("????????")
@@ -30,6 +30,9 @@ class StoreTabbarController: UITabBarController {
         //상위 네비게이션바를 지우는 역할
         
         // Do any additional setup after loading the view.
+//        let appearance = UITabBarItem.appearance()
+//        let attributes = [NSFontAttributeName:UIFont(name: "American Typewriter", size: 20)]
+//        appearance.setTitleTextAttributes(attributes, forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {

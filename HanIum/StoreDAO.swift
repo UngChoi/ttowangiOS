@@ -32,11 +32,11 @@ class StoreDAO{
         self.storeList.append(temp)
     }
     
-    func addNewStore(store:StoreEntity){
+    func addNewStore(_ store:StoreEntity){
         storeList.append(store)
     }
     
-    func updateStore(updateStore:StoreEntity){
+    func updateStore(_ updateStore:StoreEntity){
         for i in 0..<storeList.count{
             if updateStore.storeNumber == storeList[i].storeNumber{
                 
@@ -52,7 +52,7 @@ class StoreDAO{
         }
     }
     
-    func updateStore(storeNumber:String, storeName:String, phone:String, openHour:String , stampCount:Int, benefit:String, information:String, menu:String){
+    func updateStore(_ storeNumber:String, storeName:String, phone:String, openHour:String , stampCount:Int, benefit:String, information:String, menu:String){
         for i in 0..<storeList.count{
             if storeNumber == storeList[i].storeNumber{
                 
@@ -68,7 +68,7 @@ class StoreDAO{
         }
     }
     
-    func searchStoreNumber(storeNumber:String) -> StoreEntity?{
+    func searchStoreNumber(_ storeNumber:String) -> StoreEntity?{
         for i in 0..<storeList.count{
             if storeNumber == storeList[i].storeNumber {
                 return storeList[i]
@@ -77,7 +77,7 @@ class StoreDAO{
         return nil
     }
     
-    func searchStoreName(storeName:String) -> StoreEntity?{
+    func searchStoreName(_ storeName:String) -> StoreEntity?{
         for i in 0..<storeList.count{
             if storeName == storeList[i].storeName {
                 return storeList[i]
@@ -90,7 +90,7 @@ class StoreDAO{
         return storeList.count
     }
     
-    func printStore(target:StoreEntity){
+    func printStore(_ target:StoreEntity){
         for i in 0..<storeList.count{
             if target.storeNumber == storeList[i].storeNumber {
                 print(target.storeNumber)

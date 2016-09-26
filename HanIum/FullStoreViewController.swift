@@ -21,7 +21,7 @@ class FullStoreViewController: UIViewController {
         backgroundView.layer.cornerRadius = 10.0
         backgroundView.clipsToBounds = true
         backgroundView.layer.masksToBounds = true
-        backgroundView.layer.opaque = false;
+        backgroundView.layer.isOpaque = false;
         //searchTextField.layer.borderColor  = UIColor(hex: "#ff005c").CGColor
         //searchTextField.layer.borderWidth  = 2.0
         //searchTextField.layer.cornerRadius = 2.0 * searchTextField.bounds.size.width
@@ -33,7 +33,7 @@ class FullStoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func searchAction(sender: AnyObject) {
+    @IBAction func searchAction(_ sender: AnyObject) {
     }
 
     /*

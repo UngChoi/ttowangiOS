@@ -10,21 +10,25 @@ import Foundation
 
 class StampEntity {
     var num : Int
-    var date : NSDate
+    var date : Date
     var isUsed : Bool
     
     init(){
         num = 0
-        date = NSDate()
+        date = Date()
         isUsed = true
     }
     
-    init(num : Int, date : NSDate){
+    init(num : Int, date : Date){
         self.num = num
         self.date = date
         self.isUsed = false
     }
-    
+    init(num : Int, date : Date, isUsed : Bool){
+        self.num = num
+        self.date = date
+        self.isUsed = isUsed
+    }
     func useStamp() -> Bool {
         if isUsed {
             isUsed = false

@@ -19,7 +19,7 @@ class CertificationViewController: UIViewController {
         phoneTextField .underlined()
         returnTextField.underlined()
 
-        submitButton.layer.borderColor  = UIColor.whiteColor().CGColor
+        submitButton.layer.borderColor  = UIColor.white.cgColor
         submitButton.layer.borderWidth  = 2.0
         submitButton.layer.cornerRadius = 10
     }
@@ -43,7 +43,7 @@ extension UITextField {
     func underlined(){
         let border = CALayer()
         let width = CGFloat(1.0)
-        border.borderColor = UIColor.whiteColor().CGColor
+        border.borderColor = UIColor.white.cgColor
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height+1)
         border.borderWidth = width
         self.layer.addSublayer(border)
